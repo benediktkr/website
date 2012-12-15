@@ -1,0 +1,29 @@
+(ns website.static
+  (:use [hiccup.element :only [link-to]]))
+
+(def stuff 
+  nil)
+
+(def papers 
+  (hash-map
+   :tverif {:title "tverif"
+          :longname "Reasoning about the security properties of the TSense protocols"
+          :abstract "Abstract not yet written"
+          :paper "urop.pdf"
+          }
+   :ardrand {:title "ardrand"
+             :longname "The Arduino as a Hardware Random Number Generator"
+             :abstract "Cheap micro-controllers, such as the Arduino or other controllers based the Atmel AVR CPUs are being deployed in a wide variety of projects, ranging from sensors networks to robotic submarines. In this paper, we investigate the feasibility of using the Arduino as a true random number genertor (TRNG). The Arduino Reference Manual recommends using it to seed a pseudo random number generator (PRNG) due to its ability to read random atmospheric noise from its analog pins. This is an enticing application since true bits of entropy are hard to come by. Unfortunately, we show by statistical methods that the atmospheric noise of an Arduino is largely predictable in a variety of settings, and is thus a weak source of entropy. We explore various methods to extract true randomness from the micro-controller and conclude that it should not be used to produce randomness from its analog pins."
+             :skemman "http://skemman.is/item/view/1946/10689"
+             :paper "ardrand.pdf"
+             :info "This was my B.Sc. thesis. In this work, I did two things. First, I attempted to use the Arduino as a RNG. Then, I debunked claims made by the Arduino manufactures about how to seed the PRNG. "
+             :code "http://gitorious.org/benediktkr/ardrand"}
+   :tsense {:title "tsense"
+            :longname "Trusted Sensors and Support Infrastructure"
+            :abstract "Distributed measurement and monitoring systems are vital to the functioning of many critical systems and are due to be ever more important as systems grow in size and complexit . This raises questions regarding the trustworthiness of the measurement processes, critical for aking prudent manual or automatic control decisions.
+
+In this work, we address one particular aspect of secure distributed measurement systems. We describe the design and construction of a trusted sensor prototype, a small tamper-proof device which gives cryptographic guarantees of data authenticity, and optionally, confidentiality. Further, we describe the design and construction of a comprehensive client/server based measurement system, using the trusted sensor to provide end-to-end trust guarantees.
+
+Our prototype system was successfully implemented and tested on a small-scale test system of four separate network connected nodes."
+            :paper "tsense.pdf"
+            :code "http://code.google.com/p/tsense"}))
