@@ -54,6 +54,11 @@ p {
     margin-right: 7px;
 }
 
+#photos {
+    text-align:center;
+    border:none;
+}
+
 ul {
     /* margin-left: 7px; */
     padding-left: 2em;
